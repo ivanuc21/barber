@@ -406,6 +406,26 @@ footer{
         width: 40%;
     }
 }
+@media(max-width:750px){
+    .producto-1, .producto-2{
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        padding-bottom: 20px;
+    }
+    .producto-3{
+        padding: 50px;
+        display: block;
+        margin-top: 50px;
+        width: 80%;
+        margin: 30px auto;
+    }
+    .producto-1 img, .producto-2 img, .producto-3 img{
+        width: 60%;
+        border: 2px solid red;
+        margin: 0 120px;
+    }
+}
 @media (max-width:660px){
     .producto-1, .producto-2, .producto-3{
         display: block;
