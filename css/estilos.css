@@ -1,0 +1,449 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    /* Evitar que los elementos se salgan del contenedor */
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.titulo{
+    width: 100%;
+    color: white;
+    position: relative;
+    top: -350px;
+    text-align: center;
+    font-size: 50px;
+}
+
+nav{
+    background: url('/imgs/allef-vinicius-IvQeAVeJULw-unsplash.jpg');
+    height: 700px;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+header{
+    height: 700px;
+}
+.enlace{
+    position: absolute;
+    padding: 10px 0;
+}
+.logo{
+    height: 160px;
+}
+/* el elemento ul debe flotar hacia la derecha de su contenedor padre
+que enste caso seria el nav, significa que con esta propiedad la lista se 
+posicionara en el lado derecho del elemento nav */
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+/* Estilos para cada elemento que contiene los enlaces */
+nav ul li{
+    display: inline-block;
+    line-height: 110px;
+    margin: 0 10px;
+}
+/* Estilos para los enlaces dentro de los li */
+nav ul li a{
+    color: white; /*Color del texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    padding: 10px 15px; /*Padding de 10px arriba y abajo y en los lados 15px*/
+    text-transform: uppercase; /*Tranfromamos el texto a mayusuculas*/
+}
+/* Estilos al pasar el cursos sobre los enlaces y marcar el menu actual */
+li a.active, a:hover{
+    color: #333; /*Cambia el color del texto */
+    transition: 0.5s; /*Transision de medio segundo */
+}
+
+/* Estilos para el boton de abrir menu en dispositivos mas pequeños */
+.btnMenu{
+    font-size: 30px; /*Ya que se encuentra en un label se le da tamaño con font-size*/
+    float: right; /*Se flota el elemento hacia la derecha de la pantalla*/
+    line-height: 110px; /*Espacio entre la parte superior y el elemento*/
+    color: white; /*Color blanco */
+    margin-right: 30px; /*Margen solo en el lado derecho*/
+    display: none; /*Se oculta por defecto */
+}
+.check{
+    display: none;
+}
+.section-bienvenida{
+    margin: 10px 0;
+    width: 100%;
+}
+.titulo-bienvenida{
+    text-align: center;
+    padding: 15px;
+    font-size: 28px;
+}
+.bienvenida{
+    margin: 0 auto;
+    text-align: justify;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.bienvenida span{
+    color: #c0ab0f;
+}
+.contenedor-imagenes{
+    display: flex;
+    justify-content: center;
+}
+.img-bienvenida, .img-bienvenida-2{
+    width: 40%;
+}
+.img-bienvenida img, .img-bienvenida-2 img{
+    width: 90%;
+    border-radius: 10px;
+    height: 500px;
+    margin: 20px;
+}
+.titulo-galeria{
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+}
+.galeria-imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.galeria-imagenes img{
+    width: 23%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-contenido {
+    margin: auto;
+    margin-bottom: 100px;
+    display: block;
+    max-height: 80vh;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.anterior,
+.siguiente {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+}
+
+.anterior {
+    left: 0;
+    margin-left: 10px;
+}
+
+.siguiente {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.anterior:hover,
+.siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.titulo-productos{
+    text-align: center;
+    font-size: 29px;
+    padding-top: 30px;
+}
+.seccion-productos p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.producto-1 img, .producto-2 img, .producto-3 img{
+    width: 300px;
+    margin-right: 40px;
+    margin-left: 50px;
+    border-radius: 30px;
+    padding: 20px;
+}
+.producto-1 p, .producto-2 p, .producto-3 p{
+    margin: 20px 50px;
+    text-align: justify;
+    max-width: 500px;
+}
+.producto-1, .producto-2, .producto-3{
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+    background-color: #dedede;
+}
+.cuerpo-producto-1 h4, .cuerpo-producto-2 h4, .cuerpo-producto-3 h4{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.mapa{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.seccion-barberos h4{
+    color: white;
+    font-size: 29px;
+    text-align: center;
+    padding: 20px;
+}
+.seccion-barberos p{
+    text-align: justify;
+    color: white;
+    margin: 0 50px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor-principal-barberos{
+    background-color: #000;
+    margin: 20px 0;
+}
+.contenedor-barberos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor-barberos img{
+    border-radius: 20px;
+    opacity: 0.75;
+    transition: transform 0.4s ease-in-out;
+}
+.contenedor-barberos img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.barbero-1, .barbero-2, .barbero-3{
+    margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.logo-ubi, .logo-barber{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.logo-ubi img, .logo-barber img{
+    width: 100px;
+}
+.cuerpo-ubicacion{
+    margin: 0 auto;
+}
+.cuerpo-ubicacion h4{
+    text-align: center;
+    font-size: 29px;
+    padding-top: 40px;    
+}
+.cuerpo-ubicacion p{
+    text-align: center;
+}
+.contenedor-servicios{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.titulo-servicios{
+    text-align: center;
+    font-size: 29px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 19px;
+}
+.seccion-servicios{
+    text-align: center;
+}
+.servicio-1, .servicio-2, .servicio-3{
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.servicio-1 img, .servicio-2 img, .servicio-3 img{
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+}
+.cuerpo-servicio-1, .cuerpo-servicio-2, .cuerpo-servicio-3{
+    text-align: justify;
+    padding: 15px;
+}
+.cuerpo-servicio-1 h4, .cuerpo-servicio-2 h4, .cuerpo-servicio-3 h4{
+    text-align: center;
+}
+.precio-servicio{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: black;
+    height: 100px;
+}
+.text-footer{
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+}
+@media (max-width:1090px){
+    .logo{
+        height: 130px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+}
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .titulo{
+        font-size: 25px;
+    }
+}
+@media (max-width: 858px){
+    .btnMenu{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        background-color: #000;
+        top: 110px;
+        left: 100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    .check:checked ~ ul{
+        left: 0;
+    }
+    .logo{
+        height: 70px;
+    }
+    nav{
+        background-position: center;
+    }
+    .galeria-imagenes img{
+        width: 30%;
+    }
+    .servicio-1, .servicio-2, .servicio-3{
+        width: 40%;
+    }
+}
+@media (max-width:660px){
+    .producto-1, .producto-2, .producto-3{
+        display: block;
+    }
+    .producto-1 img, .producto-2 img, .producto-3 img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .cuerpo-producto-1 h4, .cuerpo-producto-2 h4, .cuerpo-producto-3 h4{
+        font-size: 18px;
+    }
+    .contenedor-imagenes{
+        display: block;
+        margin: 0 auto;
+    }
+    .img-bienvenida img, .img-bienvenida-2 img{
+        width: 90%;
+        margin: 20px;
+    }
+    .img-bienvenida, .img-bienvenida-2{
+        width: 100%;
+    }
+    .cuerpo-producto-1 p, .cuerpo-producto-2 p{
+        padding-bottom: 40px;
+    }
+    .galeria-imagenes img{
+        width: 50%;
+    }
+    .modal-contenido {
+        width: 400px;
+        max-height: 300px;
+    }
+}
+@media (max-width:530px){
+    .galeria-imagenes img{
+        width: 100%;
+    }
+    .servicio-1, .servicio-2, .servicio-3{
+        width: 100%;
+    }
+}
